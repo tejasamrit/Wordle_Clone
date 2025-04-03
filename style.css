@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121213;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: black;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #515152;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #121213;
+    color: white;
+}
+
+.light-mode .tile {
+    background-color: #ffffff;
+    color: black;
+    border-color: #d3d6da;
+}
+
+.correct {
+    background-color: #538d4e;
+}
+
+.present {
+    background-color: #b59f3b;
+}
+
+.absent {
+    background-color: #3a3a3c;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #538d4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: #6aaa64;
+}
+
+.light-mode .btn {
+    background-color: #d3d6da;
+    color: black;
+}
+
+.light-mode .btn:hover {
+    background-color: #c0c4c8;
+}
+
+.toggle-mode {
+    position: absolute;
+    top: 30px;
+    right: 90px;
+    background-color: #3a3a3c;
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-mode:hover {
+    background-color: #6aaa64;
+}
+
+.light-mode .toggle-mode {
+    background-color: #d3d6da;
+    color: black;
+}
+
+.light-mode .toggle-mode:hover {
+    background-color: #c0c4c8;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(8px);
+}
